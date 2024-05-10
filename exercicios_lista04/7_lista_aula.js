@@ -10,6 +10,9 @@ function mostrarFibonacci(qtd) {
 
     for(i = 0; i < qtd ;i++) {
 
+        if (arrayValores.length <= 0) {
+            return arrayValores
+        }
 
         if (arrayValores.length == 0) {
 
@@ -21,8 +24,6 @@ function mostrarFibonacci(qtd) {
     
             valorAnterior += valorFibo
         }
-
-
     }
 
     console.log(arrayValores);
