@@ -5,27 +5,15 @@ const readline = require('readline-sync');
 
 function mostrarFibonacci(qtd) {
     let arrayValores = [];
-    let valorFibo = 1;
-    let valorAnterior = 0;
+    let valorAtual = 1;
+    let valorProximo = 1;
 
     for(i = 0; i < qtd ;i++) {
-
-        if (arrayValores.length <= 0) {
-            return arrayValores
-        }
-
-        if (arrayValores.length == 0) {
-
-            arrayValores.push(valorFibo)
-        } else {
-            valorFibo += valorAnterior
-    
-            arrayValores.push(valorFibo);
-    
-            valorAnterior += valorFibo
-        }
+        arrayValores.push(valorAtual);
+        let temp = valorProximo;
+        valorProximo = valorAtual + valorProximo;
+        valorAtual = temp
     }
-
     console.log(arrayValores);
 };
 
