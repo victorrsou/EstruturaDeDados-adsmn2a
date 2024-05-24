@@ -176,3 +176,26 @@ function LinkedList() {
         return string
     };
 };
+
+// criando (instanciando) uma nova lista a partir da classe interna Node
+let listaEncadeada = new LinkedList();
+
+// imprimindo o conteúdo da lista que está vazia
+console.log('A lista encadeada possui o conteúdo: ' + listaEncadeada.toString());
+
+// incluindo 06 pessoas na lista encadeada
+listaEncadeada.append('Luis');
+listaEncadeada.append('Fabiana');
+listaEncadeada.append('Marcos');
+listaEncadeada.append('Gabriel');
+listaEncadeada.append('Victor');
+listaEncadeada.append('Ingrid');
+
+// imprimindo conteúdo da lista
+console.log('A lista encadeada possui o conteúdo: ' + listaEncadeada.toString());
+
+// agora vamos inserir um elemento em uma determinada posição
+listaEncadeada.insert(3, 'Julinha');
+
+// imprimindo conteúdo da lista
+console.log('A lista encadeada possui o conteúdo: ' + listaEncadeada.toString());
